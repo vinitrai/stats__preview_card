@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend&display=swap");
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lexend', sans-serif; */
+:root {
+  --dark-blue: hsl(233, 47%, 7%);
+  --dark-saturated: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --heading-white: hsl(0, 0%, 100%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --transparent-white-two: hsla(0, 0%, 100%, 0.6);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  overflow-x: hidden;
+}
+.container {
+  width: 90%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.2;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--dark-blue);
+}
+header {
+  position: relative;
+}
+header::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--soft-violet);
+  opacity: 0.4;
+}
+.card {
+  background-color: var(--dark-saturated);
+}
+.card__content {
+  text-align: center;
+  /* border: 1px solid red; */
+  padding: 0.5em;
+}
+h1 {
+  font-family: "Lexend", sans-serif;
+  font-weight: 400;
+  color: var(--heading-white);
+  font-size: 1.8rem;
+  line-height: 1.1;
+  padding: 0.5em 0;
+  margin-bottom: 0.5em;
+}
+h1 span {
+  color: var(--soft-violet);
+}
+p {
+  color: var(--transparent-white);
+  padding: 0.5em 0;
+  /* font-size: 1rem; */
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+}
+.card__stats {
+  color: var(--heading-white);
+}
+.card__container {
+  padding: 0.5em 0;
+}
+.card__container strong {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.card__container span {
+  display: block;
+  text-transform: uppercase;
+  color: var(--transparent-white-two);
+}
+img {
+  width: 100%;
+}
+@media screen and (min-width: 850px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    display: flex;
+  }
+  header,
+  .card__content {
+    flex: 1;
+  }
+  .card__content {
+    order: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2em;
+    //padding: 1em;
+    text-align: left;
+    padding: 2em;
+  }
+  p {
+    max-width: 550px;
+    /* width: 100%; */
+    margin: unset;
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+  .card__stats {
+    display: flex;
+    justify-content: space-between;
+  }
+  img {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .card__content {
+    padding: 4em;
+  }
+}
